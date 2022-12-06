@@ -1,0 +1,9 @@
+jmeter -g d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Resultados\Resultado_Ws_Carga_PROD-Es2.csv -o C:\temp\Carga_Pre_Pro_2
+jmeter -g d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Resultados\ProcesosWeb_Carga\Resultado_ProcesosWeb_Facturacion_Carga.csv -o C:\temp\Facturacion
+
+jmeter -g D:\BCP\Performance\DemoSpotify\Reporte_CSV\reporte1.csv -o C:\temp\Reporte_HTML
+
+
+Jmeter –n –t d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Scripts\ProcesosWeb_Facturacion_Carga.jmx –l d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Resultados\ProcesosWeb_Carga\Resultado_ProcesosWeb_Factura_Carga.csv
+Jmeter –n –t d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Scripts\ProcesosWeb_Radicacion_Carga.jmx –l d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Resultados\ProcesosWeb_Carga\Resultado_ProcesosWeb_Radica_Carga.csv
+Jmeter –n –t d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Scripts\WebServices_Carga.jmx –l d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Resultados\Ws_Carga\Resultado_Ws_Carga.csv
