@@ -7,3 +7,6 @@ jmeter -g D:\BCP\Performance\DemoSpotify\Reporte_CSV\reporte1.csv -o C:\temp\Rep
 Jmeter –n –t d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Scripts\ProcesosWeb_Facturacion_Carga.jmx –l d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Resultados\ProcesosWeb_Carga\Resultado_ProcesosWeb_Factura_Carga.csv
 Jmeter –n –t d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Scripts\ProcesosWeb_Radicacion_Carga.jmx –l d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Resultados\ProcesosWeb_Carga\Resultado_ProcesosWeb_Radica_Carga.csv
 Jmeter –n –t d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Scripts\WebServices_Carga.jmx –l d:\Users\USER\Documents\Automatizacion\Samtel\Performance\Resultados\Ws_Carga\Resultado_Ws_Carga.csv
+
+
+jmeter -Jjmeter.save.saveservice.subresults=false -n -t C:\apache-jmeter-5.4.3\bin\Demo_Curso_1.jmx  -l C:\Users\helia\Documents\JmeterBCP\ReporteCSV\reporte1.csv -e -o C:\Users\helia\Documents\JmeterBCP\ReporteHTML
