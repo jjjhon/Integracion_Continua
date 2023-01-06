@@ -1,0 +1,72 @@
+{ 
+    "requestHeaderOut": { 
+        "Header": { 
+            "systemId": "Prueba", 
+            "messageId": "2137630w0", 
+            "invokerDateTime": "2018-05-09", 
+            "securityCredential": "", 
+            "destination": { 
+                "name": "SeguridadApiGroup", 
+                "namespace": "http://www.serfinansa.co/seguridad/external/1.0", 
+                "operation": "validarExisteUsuario" 
+            } 
+        }, 
+        "Body": { 
+            "validarExisteUsuario": { 
+                "tipoId": "1", 
+                "idCliente": "1045675614" 
+            } 
+        } 
+    } 
+} 
+
+---------------------------------------------------------------------
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+   <soapenv:Header>
+
+      <ns7:requestHeaderOut xmlns:ns7="http://pragma.co/ents/common/BaseMessageFormat/V1">
+
+         <systemId>BPM</systemId>
+
+         <messageId>${=java.util.UUID.randomUUID()}</messageId>
+
+         <destination>
+
+            <name>TSerfinansaServiceGroup</name>
+
+            <namespace>http://www.serfinansa.co/services/external/1.0</namespace>
+
+            <operation>activacionTarjeta</operation>
+
+         </destination>
+
+         <classification>
+
+            <classification>TEST</classification>
+
+         </classification>
+
+      </ns7:requestHeaderOut>
+
+   </soapenv:Header>
+
+   <soapenv:Body>
+
+      <ns12:activacionTarjetaRequest xmlns:ns12="http://www.serfinansa.co/services/external/1.0/activacionTarjeta">
+
+         <tipoId>1</tipoId>
+
+         <idCliente>123456789</idCliente>
+
+      </ns12:activacionTarjetaRequest>
+
+   </soapenv:Body>
+
+</soapenv:Envelope>
+
+ 
+
+http://10.231.30.87:7806/esb/channelAdapter/V3
