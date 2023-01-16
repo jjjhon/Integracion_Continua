@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "15224a06-bcc2-4822-970c-3536e5ac6b2c",
+		"name": "WalletApiGroup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18507687"
+	},
+	"item": [
+		{
+			"name": "Consulta Tarjetas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestHeaderOut\": {\r\n        \"Header\": {\r\n            \"systemId\": \"IntercomBank\",\r\n            \"messageId\": \"{{$guid}}\",\r\n            \"invokerDateTime\": \"2018-12-20\",\r\n            \"securityCredential\": \"\",\r\n            \"destination\": {\r\n                \"name\": \"WalletApiGroup\",\r\n                \"namespace\": \"http://www.bancoserfinanza.com/wallet/external/1.0\",\r\n                \"operation\": \"ConsultarTarjetas\"\r\n            }\r\n        },\r\n        \"Body\": {\r\n            \"DatosCliente\": {\r\n                \"tipoId\": \"3\",\r\n                \"idCliente\": \"8040160727\"\r\n            }\r\n        }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://limen:7080/esb/restChannelAdapter",
+					"protocol": "http",
+					"host": [
+						"limen"
+					],
+					"port": "7080",
+					"path": [
+						"esb",
+						"restChannelAdapter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TarjetasDisponibles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestHeaderOut\": {\r\n        \"Header\": {\r\n            \"systemId\": \"IntercomBank\",\r\n            \"messageId\": \"{{$guid}}\",\r\n            \"invokerDateTime\": \"2018-12-20\",\r\n            \"securityCredential\": \"\",\r\n            \"destination\": {\r\n                \"name\": \"WalletApiGroup\",\r\n                \"namespace\": \"http://www.bancoserfinanza.com/wallet/external/1.0\",\r\n                \"operation\": \"TarjetasDisponibles\"\r\n            }\r\n        },\r\n        \"Body\": {\r\n            \"DatosCliente\": {\r\n                \"tipoId\": \"02\",\r\n                \"idCliente\": \"1045730873\",\r\n                \"deviceID\": \"Snk1ZueedVvemvQ4Jxnl\",\r\n                \"fingerPrint\": {\r\n                    \"IpOrigen\": \"1045730873\",\r\n                    \"Dispositivo\": \"Iphone\",\r\n                    \"Operador\": \"Tigo\",\r\n                    \"Celular\": \"3023544834\",\r\n                    \"Correo\": \"duvandtg30@gmail.com\"\r\n                }\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://limen:7080/esb/restChannelAdapter",
+					"protocol": "http",
+					"host": [
+						"limen"
+					],
+					"port": "7080",
+					"path": [
+						"esb",
+						"restChannelAdapter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BloqueoTarjeta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"requestHeaderOut\": {\r\n        \"Header\": {\r\n            \"systemId\": \"HelpiPlus\",\r\n            \"messageId\": \"{{$guid}}\",\r\n            \"invokerDateTime\": \"2022-06-17\",\r\n            \"securityCredential\": \"\",\r\n            \"destination\": {\r\n                \"name\": \"TarjetasServiceApiGroup\",\r\n                \"namespace\": \"http://www.bancoserfinanza.com/tarjetasservice/external/1.0\",\r\n                \"operation\": \"BloqueoTarjeta\"\r\n            }\r\n        },\r\n        \"Body\": {\r\n            \"BloqueoTarjeta\": {\r\n                \"typeIdentification\": \"1\",\r\n                \"identification\": \"1143252306\",\r\n                \"codeProduct\":\"5432808730195578\",\r\n                \"typeAction\": \"2\",\r\n                \"codeCausal\": \"50\",\r\n                \"channel\": \"web\",\r\n                \"user\": \"serfiprueba1\",\r\n                \"module\": \"Seguridad\"\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://limen:7080/esb/restChannelAdapter",
+					"protocol": "http",
+					"host": [
+						"limen"
+					],
+					"port": "7080",
+					"path": [
+						"esb",
+						"restChannelAdapter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
