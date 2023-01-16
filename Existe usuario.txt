@@ -95,3 +95,87 @@ http://10.231.30.87:7806/esb/channelAdapter/V3
         }
     }
 }
+-----------------------------------------------------------------------------------------------------------------------------
+
+{
+    "requestHeaderOut": {
+        "Header": {
+            "systemId": "IntercomBank",
+            "messageId": "{{$guid}}",
+            "invokerDateTime": "2018-12-20",
+            "securityCredential": "",
+            "destination": {
+                "name": "WalletApiGroup",
+                "namespace": "http://www.bancoserfinanza.com/wallet/external/1.0",
+                "operation": "ConsultarTarjetas"
+            }
+        },
+        "Body": {
+            "DatosCliente": {
+                "tipoId": "3",
+                "idCliente": "8040160727"
+            }
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------
+
+{
+    "requestHeaderOut": {
+        "Header": {
+            "systemId": "IntercomBank",
+            "messageId": "{{$guid}}",
+            "invokerDateTime": "2018-12-20",
+            "securityCredential": "",
+            "destination": {
+                "name": "WalletApiGroup",
+                "namespace": "http://www.bancoserfinanza.com/wallet/external/1.0",
+                "operation": "TarjetasDisponibles"
+            }
+        },
+        "Body": {
+            "DatosCliente": {
+                "tipoId": "02",
+                "idCliente": "1045730873",
+                "deviceID": "Snk1ZueedVvemvQ4Jxnl",
+                "fingerPrint": {
+                    "IpOrigen": "1045730873",
+                    "Dispositivo": "Iphone",
+                    "Operador": "Tigo",
+                    "Celular": "3023544834",
+                    "Correo": "duvandtg30@gmail.com"
+                }
+            }
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------
+
+{
+    "requestHeaderOut": {
+        "Header": {
+            "systemId": "HelpiPlus",
+            "messageId": "{{$guid}}",
+            "invokerDateTime": "2022-06-17",
+            "securityCredential": "",
+            "destination": {
+                "name": "TarjetasServiceApiGroup",
+                "namespace": "http://www.bancoserfinanza.com/tarjetasservice/external/1.0",
+                "operation": "BloqueoTarjeta"
+            }
+        },
+        "Body": {
+            "BloqueoTarjeta": {
+                "typeIdentification": "1",
+                "identification": "1143252306",
+                "codeProduct":"5432808730195578",
+                "typeAction": "2",
+                "codeCausal": "50",
+                "channel": "web",
+                "user": "serfiprueba1",
+                "module": "Seguridad"
+            }
+        }
+    }
+}
