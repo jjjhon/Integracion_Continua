@@ -70,3 +70,28 @@
  
 
 http://10.231.30.87:7806/esb/channelAdapter/V3
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+{
+    "requestHeaderOut": {
+        "Header": {
+            "systemId": "WEB",
+            "messageId": "{{$timestamp}}",
+            "invokerDateTime": "2019-02-27",
+            "securityCredential": "",
+            "destination": {
+                "name": "SeguridadApiGroup",
+                "namespace": "http://www.serfinansa.co/seguridad/external/1.0",
+                "operation": "validaUsuario"
+            }
+        },
+        "Body": {
+            "validaUsuario": {
+                "tipoId": "1",
+                "idCliente": "1129564979 ",
+                "claveUs": "1010"
+            }
+        }
+    }
+}
